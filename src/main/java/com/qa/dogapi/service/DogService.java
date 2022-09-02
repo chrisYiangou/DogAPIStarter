@@ -59,6 +59,7 @@ public class DogService {
 			Dog updatedDog = oldDog.get();
 			updatedDog.setAge(newDog.getAge());
 			updatedDog.setName(newDog.getName());
+			updatedDog.setTrainer(newDog.getTrainer());
 			return this.repo.saveAndFlush(updatedDog);
 		}
 		

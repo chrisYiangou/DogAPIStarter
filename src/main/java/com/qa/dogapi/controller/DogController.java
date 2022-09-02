@@ -16,16 +16,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.dogapi.model.Dog;
 import com.qa.dogapi.service.DogService;
+import com.qa.dogapi.service.JoinService;
 
 @RestController
-@RequestMapping("/home")
+@RequestMapping("/dogs")
 public class DogController {
 
 	@Autowired
 	DogService service;
 	
-	public DogController(DogService service) {
+	@Autowired
+	JoinService joinService;
+	
+	public DogController(DogService service, JoinService joinService) {
 		this.service = service;
+		this.joinService = joinService;
 	}
 	
 	@GetMapping("/get")
@@ -66,6 +71,8 @@ public class DogController {
 	public ResponseEntity<Dog> updateDogById(@RequestBody Dog dog, @PathVariable Integer id) {
 		return new ResponseEntity<Dog>(this.service.updateDogById(dog, id), HttpStatus.ACCEPTED);
 	}
+	
+	
 	
 	@DeleteMapping("/deleteDog/{id}")
 	public ResponseEntity<Boolean> deleteDogById(@PathVariable Integer id) {
