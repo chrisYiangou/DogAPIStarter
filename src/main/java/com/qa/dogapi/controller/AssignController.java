@@ -25,7 +25,6 @@ public class AssignController {
 	@PutMapping("/{dogId}/assignTrainer/{trainerId}")
 	public ResponseEntity<Dog> assignTrainer(@PathVariable Integer dogId, @PathVariable Integer trainerId) {
 		// return new ResponseEntity<Dog>(this.service.assignTrainer(dogId, trainerId), HttpStatus.CREATED);	
-		
 		return (this.service.assignTrainer(dogId, trainerId) instanceof Dog) 
 				? new ResponseEntity<Dog>(this.service.assignTrainer(dogId, trainerId),HttpStatus.CREATED) 
 				: new ResponseEntity<Dog>(HttpStatus.NOT_FOUND);
