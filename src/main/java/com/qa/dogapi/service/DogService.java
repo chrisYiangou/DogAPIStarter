@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.qa.dogapi.dto.DogDTO;
+import com.qa.dogapi.mapper.DogMapper;
 import com.qa.dogapi.persistance.model.Dog;
 import com.qa.dogapi.persistance.repo.DogRepo;
 
@@ -15,17 +17,22 @@ public class DogService {
 	@Autowired
 	DogRepo repo;
 	
+	@Autowired
+	DogMapper mapper;
+	
 	public DogService(DogRepo repo) {
 		this.repo = repo; 
 	}
 	
 	//Single - Many addManyDogs
-	public Dog createDog(Dog dog) {
-		return this.repo.save(dog);
+	public DogDTO createDog(Dog dog) {
+		Dog created = this.repo.save(dog);
+		return this.mapper.mapToDTO(created);
 	}
 	
 	//Many 
 	public List<Dog> createManyDogs(List<Dog> dogs) {
+		List<Dog> created = this.repo.saveAllAndFlush(dogs);
 		return this.repo.saveAllAndFlush(dogs);
 	}
 	

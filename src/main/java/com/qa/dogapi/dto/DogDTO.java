@@ -21,7 +21,6 @@ public class DogDTO {
 
 	public DogDTO() {
 
-		
 	}
 	
 	public Integer getDogId() {
