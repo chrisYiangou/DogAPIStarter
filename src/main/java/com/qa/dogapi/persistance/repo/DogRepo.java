@@ -1,11 +1,11 @@
-package com.qa.dogapi.repo;
+package com.qa.dogapi.persistance.repo;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.qa.dogapi.model.Dog;
+import com.qa.dogapi.persistance.model.Dog;
 
 @Repository
 public interface DogRepo extends JpaRepository<Dog, Integer>{

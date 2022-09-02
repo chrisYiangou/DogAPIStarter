@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.qa.dogapi.persistance.model.Dog;
+
 import nl.jqno.equalsverifier.EqualsVerifier;
 
 public class DogUnitTest {

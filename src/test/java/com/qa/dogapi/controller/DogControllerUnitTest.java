@@ -14,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qa.dogapi.model.Dog;
+import com.qa.dogapi.persistance.model.Dog;
 import com.qa.dogapi.service.DogService;
 
 @ExtendWith(SpringExtension.class)

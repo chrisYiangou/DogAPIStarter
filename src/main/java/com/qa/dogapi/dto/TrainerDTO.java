@@ -6,9 +6,12 @@ import com.qa.dogapi.model.Dog;
 
 public class TrainerDTO {
 	
+	privateInteger 
 	private String trainerName;
 	private String favBreed;
 	private Set<Dog> dogsOwned;
+	
+	public TrainerDTO
 	
 
 }

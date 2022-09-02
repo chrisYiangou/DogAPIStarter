@@ -1,4 +1,4 @@
-package com.qa.dogapi.model;
+package com.qa.dogapi.persistance.model;
 
 import java.io.Serializable;
 import java.util.Objects;

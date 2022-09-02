@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.qa.dogapi.model.Dog;
+import com.qa.dogapi.persistance.model.Dog;
 import com.qa.dogapi.service.JoinService;
 
 @RestController

@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.dogapi.model.Dog;
-import com.qa.dogapi.repo.DogRepo;
+import com.qa.dogapi.persistance.model.Dog;
+import com.qa.dogapi.persistance.repo.DogRepo;
 
 @Service
 public class DogService {

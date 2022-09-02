@@ -4,10 +4,10 @@ import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.dogapi.model.Dog;
-import com.qa.dogapi.model.Trainer;
-import com.qa.dogapi.repo.DogRepo;
-import com.qa.dogapi.repo.TrainerRepo;
+import com.qa.dogapi.persistance.model.Dog;
+import com.qa.dogapi.persistance.model.Trainer;
+import com.qa.dogapi.persistance.repo.DogRepo;
+import com.qa.dogapi.persistance.repo.TrainerRepo;
 
 @Service
 public class JoinService {
